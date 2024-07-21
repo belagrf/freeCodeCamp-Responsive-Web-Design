@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1 id="title">Survey Form</h1>
+  <p id="description">Survey Form description</p>
+  <form id="survey-form" action="">
+    <fieldset>
+      <label for="name" id="name-label">Name (required)
+        <input type="text" id="name" placeholder="Your Full Name" required>
+      </label>
+      <label for="email" id="email-label">Email (required)
+        <input type="email" id="email" placeholder="Your Email Address" required>
+      </label>
+      <label for="number" id="number-label">Age (optional)
+        <input type="number" id="number" min="13" max="120" placeholder="Your Age">
+      </label>
+    </fieldset>
+    <fieldset>
+      <label for="dropdown">Options
+        <select id="dropdown">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+        </select>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Select an option</legend>
+      <label>Option 1
+        <input type="radio" name="radio" value="radio1">
+      </label>
+      <label>Option 2
+        <input type="radio" name="radio" value="radio2">
+      </label>
+      <label>Option 3
+        <input type="radio" name="radio" value="radio3">
+      </label>
+      <label>Option 4
+        <input type="radio" name="radio" value="radio4">
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Check all that apply</legend>
+      <label>Checkbox 1
+        <input type="checkbox" value="checkbox1">
+      </label>
+      <label>Checkbox 2
+        <input type="checkbox" value="checkbox2">
+      </label>
+      <label>Checkbox 3
+        <input type="checkbox" value="checkbox3">
+      </label>
+      <label>Checkbox 4
+        <input type="checkbox" value="checkbox4">
+      </label>
+    </fieldset>
+    <fieldset>
+      <label>
+        <textarea placeholder="Your comments"></textarea>
+      </label>
+    </fieldset>
+    <input type="submit" id="submit">
+  </form>
+</body>
+</html>
