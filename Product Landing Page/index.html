@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamTrack - Your Personal Sleep Coach</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Header section containing the logo and navigation menu -->
+    <header id="header">
+        <!-- Link to the homepage with a logo image -->
+        <a href="/" class="logo">
+            <img id="header-img" src="/api/placeholder/120/30" alt="DreamTrack Logo" width="120" height="30">
+        </a>
+        <!-- Navigation bar with a menu toggle button for mobile and the navigation links -->
+        <nav id="nav-bar">
+            <!-- Button to toggle the menu on mobile screens -->
+            <button id="menu-toggle" aria-expanded="false" aria-controls="primary-navigation">
+                <span class="sr-only">Menu</span>
+                <span aria-hidden="true"></span>
+            </button>
+            <!-- Unordered list for primary navigation links -->
+            <ul id="primary-navigation">
+                <li><a class="nav-link" href="#features">Features</a></li>
+                <li><a class="nav-link" href="#pricing">Pricing</a></li>
+                <li><a class="nav-link" href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero section with a main heading, description, and call-to-action button -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-heading">Unlock the Power of Restful Sleep with DreamTrack</h1>
+                <p class="hero-paragraph">DreamTrack is your personal sleep coach, helping you optimize your sleep patterns and wake up feeling refreshed every day. Our advanced AI-powered app tracks your sleep cycles, provides personalized insights, and offers tailored recommendations to improve your sleep quality.</p>
+                <a href="#" class="cta-button">Start Your Free Trial</a>
+            </div>
+            <div class="hero-img" role="img" aria-label="Peaceful sleeping person"></div>
+        </section>
+
+        <!-- Features section outlining key features of the app -->
+        <section id="features" class="features">
+            <h2>Key Features</h2>
+            <div class="feature-grid">
+                <!-- Individual feature items with icons, titles, and descriptions -->
+                <div class="feature-item">
+                    <img src="/api/placeholder/64/64" alt="" width="64" height="64">
+                    <h3>Advanced Sleep Tracking</h3>
+                    <p>Monitor your sleep cycles, duration, and quality with precision.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="/api/placeholder/64/64" alt="" width="64" height="64">
+                    <h3>AI-Powered Analysis</h3>
+                    <p>Get personalized insights and recommendations based on your sleep data.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="/api/placeholder/64/64" alt="" width="64" height="64">
+                    <h3>Smart Alarm</h3>
+                    <p>Wake up naturally during your lightest sleep phase for a refreshed start.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trailer section with a video showcasing the app -->
+        <section class="trailer">
+            <h2>See DreamTrack in Action</h2>
+            <video controls poster="https://shuteye.ai/wp-content/uploads/2021/10/How-to-track-sleep-without-watch-sleep-tracker.jpg">
+                <source src="dreamtrack-demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+
+        <!-- Pricing section displaying different subscription plans -->
+        <section id="pricing" class="pricing">
+            <h2>Choose Your Plan</h2>
+            <div class="price-grid">
+                <!-- Basic plan item -->
+                <div class="price-item">
+                    <h3>Basic</h3>
+                    <p class="price">$4.99/month</p>
+                    <ul>
+                        <li>Sleep tracking</li>
+                        <li>Basic sleep insights</li>
+                        <li>7-day history</li>
+                    </ul>
+                    <a href="#" class="button">Get Started</a>
+                </div>
+                <!-- Pro plan item, highlighted as featured -->
+                <div class="price-item featured">
+                    <h3>Pro</h3>
+                    <p class="price">$9.99/month</p>
+                    <ul>
+                        <li>Advanced sleep tracking</li>
+                        <li>Personalized recommendations</li>
+                        <li>Unlimited history</li>
+                        <li>Smart alarm</li>
+                    </ul>
+                    <a href="#" class="button">Go Pro</a>
+                </div>
+                <!-- Family plan item -->
+                <div class="price-item">
+                    <h3>Family</h3>
+                    <p class="price">$14.99/month</p>
+                    <ul>
+                        <li>All Pro features</li>
+                        <li>Up to 5 users</li>
+                        <li>Family sleep insights</li>
+                    </ul>
+                    <a href="#" class="button">Choose Family</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ section addressing common questions -->
+        <section id="faq" class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <!-- Individual FAQ items with questions and answers -->
+                <div class="faq-item">
+                    <h3>How accurate is DreamTrack's sleep tracking?</h3>
+                    <p>DreamTrack uses advanced algorithms and your device's sensors to provide highly accurate sleep tracking, typically within a 95% accuracy range.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need to wear a device while sleeping?</h3>
+                    <p>No, DreamTrack works with your smartphone placed near your bed. For even more accurate tracking, you can use it with compatible smartwatches.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can DreamTrack help with sleep disorders?</h3>
+                    <p>While DreamTrack can provide valuable insights into your sleep patterns, it's not a medical device. Always consult with a healthcare professional for sleep disorders.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter section for subscribing to updates -->
+        <section class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for sleep tips and app updates.</p>
+            <!-- Form for email subscription -->
+            <form action="https://www.freecodecamp.com/email-submit" method="post">
+                <label for="email" class="sr-only">Email address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer section with copyright information -->
+    <footer>
+        <p>&copy; 2024 DreamTrack. All rights reserved.</p>
+    </footer>
+</body>
+</html>

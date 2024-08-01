@@ -1,0 +1,382 @@
+:root {
+    /* Define color variables for easy maintenance and consistency */
+    --primary-color: #4285f4; /* Main color used for buttons and highlights */
+    --secondary-color: #34a853; /* Color for hover effects */
+    --accent-color: #fbbc05; /* Color used to highlight featured items */
+    --text-color: #ffffff; /* Text color used throughout the site */
+    --background-color: #1a1a1a; /* Background color for the main content */
+    --card-background: #2c2c2c; /* Background color for cards and sections */
+}
+
+* {
+    /* Ensure consistent box-sizing and remove default margins and padding */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Set the overall font and background for the page */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+a {
+    /* Style for links */
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.sr-only {
+    /* Hide elements visually but keep them accessible to screen readers */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+header {
+    /* Style the header with a fixed position and dark background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: rgba(26, 26, 26, 0.9);
+}
+
+nav ul {
+    /* Style the navigation menu */
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    /* Add space between navigation items */
+    margin-left: 2rem;
+}
+
+#menu-toggle {
+    /* Hide menu toggle button by default */
+    display: none;
+}
+
+.hero {
+    /* Full-height section with centered content */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem 5% 2rem;
+    gap: 20px;
+}
+
+.hero-content {
+    /* Style for the main content in the hero section */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    color: #000000;
+    background: #f1f1f1;
+    width: 80%;
+    min-height: 80vh;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    padding: 2rem;
+}
+
+.hero-heading {
+    /* Style for the main heading in the hero section */
+    font-size: 2.5rem;
+    margin: 2rem;
+    background: linear-gradient(54deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.hero-paragraph {
+    /* Style for the paragraph text in the hero section */
+    margin: 2rem;
+    font-weight: bold;
+}
+
+.cta-button {
+    /* Style for the call-to-action button */
+    margin: 2rem;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover, .cta-button:focus {
+    /* Hover and focus states for the CTA button */
+    background-color: var(--secondary-color);
+    outline: 2px solid var(--text-color);
+}
+
+.hero-img {
+    /* Style for the image or background image in the hero section */
+    width: 80%;
+    height: 80vh;
+    background-image: url('https://i.pinimg.com/originals/12/c6/3b/12c63bc3810b74287dcb04a5827e7f6c.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.features, .pricing, .faq, .newsletter {
+    /* Style for section containers with centered text */
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.feature-grid, .price-grid, .faq-grid {
+    /* Grid layout for feature, pricing, and FAQ items */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-item, .price-item, .faq-item {
+    /* Style for individual items in grids */
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item img {
+    /* Style for icons in feature items */
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.price-item {
+    /* Style for pricing items */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price-item.featured {
+    /* Highlight the featured pricing plan */
+    border: 2px solid var(--accent-color);
+    transform: scale(1.05);
+}
+
+.price {
+    /* Style for pricing text */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.price-item ul {
+    /* Remove default list styles for pricing features */
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.price-item li {
+    /* Space between list items in pricing section */
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    /* Style for general buttons */
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover, .button:focus {
+    /* Hover and focus states for general buttons */
+    background-color: #3367d6;
+    outline: 2px solid var(--text-color);
+}
+
+.trailer video {
+    /* Style for video elements */
+    width: 90%;
+    max-width: 90%px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.trailer h2 {
+    /* Style for the heading in the trailer section */
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.newsletter form {
+    /* Style for the newsletter subscription form */
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.newsletter input[type="email"] {
+    /* Style for the email input field */
+    padding: 0.8rem;
+    width: 100%;
+    max-width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter button {
+    /* Style for the subscribe button */
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover, .newsletter button:focus {
+    /* Hover and focus states for the subscribe button */
+    background-color: #3367d6;
+    outline: 2px solid var(--text-color);
+}
+
+footer {
+    /* Style for the footer section */
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card-background);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .hero {
+        /* Adjust the layout for smaller screens */
+        flex-direction: column;
+    }
+
+    .hero-content, .hero-img {
+        width: 100%;
+    }
+
+    .hero-img {
+        height: 50vh;
+    }
+
+    .hero-heading {
+        font-size: 2rem;
+    }
+
+    .feature-grid, .price-grid, .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-item.featured {
+        transform: none;
+    }
+
+    nav ul {
+        /* Style for mobile navigation menu */
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--background-color);
+        padding: 1rem;
+    }
+
+    nav ul.active {
+        /* Show the navigation menu when active */
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    #menu-toggle {
+        /* Style for the menu toggle button on mobile */
+        display: block;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    #menu-toggle span {
+        /* Style for the hamburger icon in the menu toggle button */
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--text-color);
+        margin: 5px 0;
+    }
+
+    .newsletter form {
+        /* Adjust the layout of the newsletter form for mobile */
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter input[type="email"] {
+        border-radius: 5px;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter button {
+        border-radius: 5px;
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-heading {
+        /* Adjust font size for very small screens */
+        font-size: 1.5rem;
+    }
+
+    .hero-paragraph {
+        /* Adjust font size for the paragraph text on very small screens */
+        font-size: 0.9rem;
+    }
+
+    .cta-button {
+        /* Adjust padding and font size for the call-to-action button on very small screens */
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+}
